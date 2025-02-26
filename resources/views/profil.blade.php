@@ -7,6 +7,11 @@
     @vite('resources/css/app.css')
 
     <style>
+        body, html {
+                    margin: 0;
+                    padding: 0;
+                    overflow-x: hidden; /* Mencegah horizontal scroll */
+                }
         /* Modal Styles */
         .modal {
             display: none; /* Hidden by default */
@@ -78,21 +83,8 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- Header -->
-    <header class="bg-green-600 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">MI Raudlatul Athfal</div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="/" class="hover:text-gray-200">Home</a></li>
-                    <li><a href="/profil" class="hover:text-gray-200">Profil</a></li>
-                    <li><a href="/galeri" class="hover:text-gray-200">Galeri</a></li>
-                    <li><a href="#" id="contactBtn" class="hover:text-gray-200">Kontak</a></li>
-                    <li><a href="/ppdb" class="hover:text-gray-200">PPDB</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Navbar dari Component -->
+    <x-navbar />
 
     <!-- Modal -->
     <div id="contactModal" class="modal">
@@ -106,6 +98,30 @@
             </div>
         </div>
     </div>
+
+    <!-- Sambutan Kepala Sekolah -->
+<section class="py-16 bg-gray-100">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
+        <!-- Foto Kepala Sekolah -->
+        <div class="w-full md:w-1/3">
+            <img src="/images/kpl.jpg" alt="Kepala Sekolah" class="w-full h-auto rounded-lg shadow-lg">
+        </div>
+        <!-- Teks Sambutan -->
+        <div class="w-full md:w-2/3">
+            <h2 class="text-3xl font-bold text-gray-800">Sambutan Kepala Sekolah</h2>
+            <p class="mt-4 text-gray-600 text-justify">
+                Sekolah adalah tempat mencetak penerus bangsa yang berkualitas dan berprestasi di segala bidang 
+                yang dapat bersaing di dunia internasional.
+            </p>
+            <p class="mt-2 text-gray-600 text-justify">
+                Selain itu, sekolah juga menjadi tempat bagi anak-anak untuk mendapatkan dukungan dalam 
+                melengkapi pembelajarannya sehingga mereka dapat berkembang secara optimal.
+            </p>
+        </div>
+    </div>
+</section>
+
+
     <!-- Profil Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto">

@@ -8,6 +8,11 @@
     @vite('resources/css/app.css')
 
     <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Mencegah horizontal scroll */
+        }
         /* Modal Styles */
         .modal {
             display: none; /* Hidden by default */
@@ -79,22 +84,8 @@
 </head>
 <body class="bg-gray-50">
 
-    <!-- Header -->
-    <header class="bg-green-600 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">MI Raudlatul Athfal</div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="/" class="hover:text-gray-200">Home</a></li>
-                    <li><a href="/profil" class="hover:text-gray-200">Profil</a></li>
-                    <li><a href="/galeri" class="hover:text-gray-200">Galeri</a></li>
-                    <li><a href="#" id="contactBtn" class="hover:text-gray-200">Kontak</a></li>
-                    <li><a href="/ppdb" class="hover:text-gray-200">PPDB</a></li>
-                </ul>
-            </nav>
-            <a href="/login" class="bg-white text-green-600 py-2 px-4 rounded hover:bg-gray-200">Login</a>
-        </div>
-    </header>
+    <!-- Navbar dari Component -->
+    <x-navbar />
 
     <!-- Modal -->
     <div id="contactModal" class="modal">
@@ -111,10 +102,9 @@
 
     <!-- Hero Section -->
     <section id="home" class="bg-green-100 py-16 text-center bg-cover bg-center" style="background-image: url('/images/mi.jpg');">
-    <div class="container mx-auto">
         <div class="container mx-auto">
-            <h1 class="text-4xl font-bold text-white">MI RAUDLATUL ATFAL NONGKOSAWIT</h1>
-            <p class="mt-4 text-white">Mengomposisikan Madrasah sebagai pusat keunggulan yang mampu mempersiapkan dan mengembangkan sumber daya insani yang berkualitas di bidang IPTEK dan Imtaq</p>
+            <h1 class="text-4xl font-bold text-green-600 text-outline-white">MI RAUDLATUL ATFAL NONGKOSAWIT</h1>
+            <p class="mt-4 text-green-600 text-outline-white">Mengomposisikan Madrasah sebagai pusat keunggulan yang mampu mempersiapkan dan mengembangkan sumber daya insani yang berkualitas di bidang IPTEK dan Imtaq</p>
             <a href="/profil" class="mt-6 inline-block bg-green-600 text-white py-3 px-6 rounded hover:bg-green-700">Pelajari Lebih Lanjut</a>
         </div>
     </section>

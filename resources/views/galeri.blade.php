@@ -8,6 +8,11 @@
     @vite('resources/css/app.css')
 
     <style>
+         body, html {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Mencegah horizontal scroll */
+        }
         /* Modal Styles */
         .modal {
             display: none; /* Hidden by default */
@@ -78,35 +83,22 @@
     </style>
 </head>
 <body class="bg-gray-50">
+ <!-- Navbar dari Component -->
+ <x-navbar />
 
-    <!-- Header -->
-    <header class="bg-green-600 text-white py-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold">MI Raudlatul Athfal</div>
-            <nav>
-                <ul class="flex space-x-4">
-                    <li><a href="/" class="hover:text-gray-200">Home</a></li>
-                    <li><a href="/profil" class="hover:text-gray-200">Profil</a></li>
-                    <li><a href="/galeri" class="hover:text-gray-200">Galeri</a></li>
-                    <li><a href="#" id="contactBtn" class="hover:text-gray-200">Kontak</a></li>
-                    <li><a href="/ppdb" class="hover:text-gray-200">PPDB</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Modal -->
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div class="modal-title">Kontak Kami</div>
-            <div class="modal-message">
-                Silahkan hubungi 
-                <a href="mailto:miraudlatulatfalnongkosawit@gmail.com">miraudlatulatfalnongkosawit@gmail.com</a> 
-                untuk berkomunikasi secara lebih intens.
-            </div>
+<!-- Modal -->
+<div id="contactModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-title">Kontak Kami</div>
+        <div class="modal-message">
+            Silahkan hubungi 
+            <a href="mailto:miraudlatulatfalnongkosawit@gmail.com">miraudlatulatfalnongkosawit@gmail.com</a> 
+            untuk berkomunikasi secara lebih intens.
         </div>
     </div>
+</div>
+
 
     <!-- Galeri Section -->
     <section class="py-16 bg-white">

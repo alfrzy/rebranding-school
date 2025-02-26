@@ -21,3 +21,6 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+tailwind.config.js
+composer.lock
+package-lock.json
